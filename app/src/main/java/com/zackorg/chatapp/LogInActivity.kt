@@ -21,6 +21,8 @@ class LogInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
 
+        supportActionBar?.hide()
+
         mAuth= FirebaseAuth.getInstance()
 
         edtEmail = findViewById(R.id.edtEmail)
@@ -47,6 +49,7 @@ class LogInActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val intent = Intent(this@LogInActivity,MainActivity::class.java)
+                    finish()
                     startActivity(intent)
 
                     // Sign in success, update UI with the signed-in user's information
