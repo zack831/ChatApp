@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
         android:src="@drawable/icon"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"/>
@@ -49,17 +49,15 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/btn_background"
         />
-
-    <Button
-        android:id="@+id/btnSignup"
-        android:layout_width="150dp"
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLogin"
+        android:text="New User? Click Here to Sign Up"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Sign Up"
         android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_background"
+        android:layout_marginBottom="10dp"
         />
 
 </RelativeLayout>

@@ -5,9 +5,10 @@
 
     <TextView
         android:id="@+id/nameTxt"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="7dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="22sp"
         android:text="Check"
         android:textStyle="bold"
         android:layout_marginStart="10dp"/>

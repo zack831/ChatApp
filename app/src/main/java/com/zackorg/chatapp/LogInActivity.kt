@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import java.net.PasswordAuthentication
@@ -14,7 +15,7 @@ class LogInActivity : AppCompatActivity() {
     private lateinit var edtEmail: EditText
     private lateinit var edtPass:EditText
     private lateinit var btnLogin: Button
-    private lateinit var btnSignup: Button
+    private lateinit var signup: TextView
     private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,9 +29,9 @@ class LogInActivity : AppCompatActivity() {
         edtEmail = findViewById(R.id.edtEmail)
         edtPass = findViewById(R.id.edtPass)
         btnLogin = findViewById(R.id.btnLogin)
-        btnSignup = findViewById(R.id.btnSignup)
+        signup = findViewById(R.id.signup)
 
-        btnSignup.setOnClickListener {
+        signup.setOnClickListener {
             val intent = Intent(this,SignInActivity::class.java)
             startActivity(intent)
         }
