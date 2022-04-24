@@ -1,42 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInActivity">
+    tools:context=".LogInActivity"
+    android:background="@drawable/gradient_background">
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
         android:src="@drawable/icon"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerInParent="true"
+        android:text="ChatAPP"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/start2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="Log In To Your Account"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edtEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/edt_background"
-        android:layout_below="@+id/logo"
-        android:padding="10dp"
+        android:layout_below="@+id/start2"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        android:hint="Username" />
+        android:background="@drawable/edt_background"
+        android:hint="Enter Your Email"
+        android:padding="10dp"
+        android:textColorHint="@color/dark_blue" />
 
     <EditText
         android:id="@+id/edtPass"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/edtEmail"
-        android:padding="10dp"
-        android:background="@drawable/edt_background"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        android:hint="Password" />
+        android:background="@drawable/edt_background"
+        android:textColorHint="@color/dark_blue"
+        android:hint="Enter Your Password"
+        android:padding="10dp" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -44,20 +71,20 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtPass"
         android:layout_centerHorizontal="true"
-        android:text="Log In"
-        android:textSize="20sp"
         android:layout_marginTop="10dp"
         android:background="@drawable/btn_background"
-        />
+        android:text="Log In"
+        android:textSize="20sp"/>
+
     <TextView
         android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New User? Click Here to Sign Up"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp"
+        android:layout_centerInParent="true"
         android:layout_marginBottom="10dp"
-        />
+        android:text="Click Here to Sign Up"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp" />
 
 </RelativeLayout>
